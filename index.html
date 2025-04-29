@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDF Explanation in Hinglish</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+  <style>
+    body {
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .dark-theme {
+      background-color: #1a202c;
+      color: #e2e8f0;
+    }
+    .light-theme {
+      background-color: #f7fafc;
+      color: #2d3748;
+    }
+    .card {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    .theme-toggle {
+      cursor: pointer;
+    }
+    .neon-border {
+      border: 2px solid transparent;
+      box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+    }
+  </style>
+</head>
+<body class="dark-theme min-h-screen">
+  <!-- Navigation Bar -->
+  <nav class="bg-gray-800 p-4 sticky top-0 z-10">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-white">PDF Explanation in Hinglish</h1>
+      <div class="theme-toggle text-white" onclick="toggleTheme()">
+        <svg id="theme-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+        </svg>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container mx-auto p-6">
+    <!-- PDF 1: SE lec 1 2.pdf -->
+    <section class="mb-12">
+      <h2 class="text-3xl font-bold mb-6 text-center">Social Entrepreneurship (Lecture 1 & 2)</h2>
+
+      <!-- Page 1 -->
+      <div class="card flex flex-col md:flex-row bg-gray-700 rounded-lg p-6 mb-6 neon-border">
+        <div class="md:w-1/2 p-4">
+          <h3 class="text-xl font-semibold mb-2">Page 1: Social Entrepreneurship Introduction</h3>
+          <p>SOCIAL ENTREPRENEURSHIP<br>Lecture 1</p>
+        </div>
+        <div class="md:w-1/2 p-4 bg-gray-600 rounded-lg">
+          <h3 class="text-xl font-semibold mb-2">Hinglish Explanation</h3>
+          <p>Ye page social entrepreneurship ka introduction deta hai. Social entrepreneurship matlab aisa business jo sirf paisa kamane ke liye nahi, balki society ke liye kuch accha karne ke liye hota hai. Isme hum seekhenge ki kaise hum apne skills aur ideas se duniya mein positive change la sakte hain.</p>
+        </div>
+      </div>
+
+      <!-- Page 2 -->
+      <div class="card flex flex-col md:flex-row bg-gray-700 rounded-lg p-6 mb-6 neon-border">
+        <div class="md:w-1/2 p-4">
+          <h3 class="text-xl font-semibold mb-2">Page 2: Why Are You Here?</h3>
+          <p>WHY ARE YOU HERE?</p>
+        </div>
+        <div class="md:w-1/2 p-4 bg-gray-600 rounded-lg">
+          <h3 class="text-xl font-semibold mb-2">Hinglish Explanation</h3>
+          <p>Ye page puchta hai ki tum social entrepreneurship kyun karna chahte ho? Kya wajah hai jo tumhe yaha leke aayi? Ye sochne ke liye kehta hai ki tumhara goal kya hai – kya tum society ke liye kuch karna chahte ho ya apne passion ko follow karna chahte ho?</p>
+        </div>
+      </div>
+
+      <!-- Page 3 -->
+      <div class="card flex flex-col md:flex-row bg-gray-700 rounded-lg p-6 mb-6 neon-border">
+        <div class="md:w-1/2 p-4">
+          <h3 class="text-xl font-semibold mb-2">Page 3: Motivations</h3>
+          <p>You have good at it<br>Perhaps for society<br>You may get money out of it</p>
+        </div>
+        <div class="md:w-1/2 p-4 bg-gray-600 rounded-lg">
+          <h3 class="text-xl font-semibold mb-2">Hinglish Explanation</h3>
+          <p>Is page mein bataya gaya hai ki social entrepreneurship karne ki wajah kya ho sakti hai:
+            <ul class="list-disc ml-5">
+              <li>Tum isme acche ho, matlab tumhare paas skills hain jo kaam aayenge.</li>
+              <li>Shayad tum society ke liye kuch karna chahte ho, jaise gareebi hatana ya education improve karna.</li>
+              <li>Isse paisa bhi kama sakte ho, jo ek bonus hai!</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+
+      <!-- Page 4: Skipped (OCR error, repetitive zeros) -->
+
+      <!-- Page 5 -->
+      <div class="card flex flex-col md:flex-row bg-gray-700 rounded-lg p-6 mb-6 neon-border">
+        <div class="md:w-1/2 p-4">
+          <h3 class="text-xl font-semibold mb-2">Page 5: Global Millionaire Club (2016)</h3>
+          <table class="w-full border-collapse border border-gray-400">
+            <thead>
+              <tr class="bg-gray-600">
+                <th class="border border-gray-400 p-2">Country</th>
+                <th class="border border-gray-400 p-2">Millionaires in 2016</th>
+                <th class="border border-gray-400 p-2">Change since 2015</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>United States</td><td>13.6m</td><td>+283,000</td></tr>
+              <tr><td>Japan</td><td>2.8m</td><td>+738,000</td></tr>
+              <tr><td>United Kingdom</td><td>2.2m</td><td>-406,000</td></tr>
+              <tr><td>Germany</td><td>1.6m</td><td>+44,000</td></tr>
+              <tr><td>China</td><td>1.6m</td><td>-43,000</td></tr>
+              <tr><td>Italy</td><td>1.1m</td><td>+11,000</td></tr>
+              <tr><td>Canada</td><td>1.1m</td><td>+25,000</td></tr>
+              <tr><td>Australia</td><td>1.1m</td><td>-12,000</td></tr>
+              <tr><td>Switzerland</td><td>716,000</td><td>-58,000</td></tr>
+              <tr><td>Taiwan</td><td>356,000</td><td>+27,000</td></tr>
+              <tr><td>Brazil</td><td>172,000</td><td>-10,000</td></tr>
+              <tr><td>Russia</td><td>79,000</td><td>-15,000</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="md:w-1/2 p-4 bg-gray-600 rounded-lg">
+          <h3 class="text-xl font-semibold mb-2">Hinglish Explanation</h3>
+          <p>Ye page duniya ke millionaires ke baare mein data deta hai (2016 ka):
+            <ul class="list-disc ml-5">
+              <li>United States mein sabse zyada millionaires hain – 13.6 million, aur 283,000 naye bane.</li>
+              <li>Japan mein 2.8 million hain, aur 738,000 ka bada increase hua.</li>
+              <li>UK mein 2.2 million hain, lekin 406,000 kam ho gaye.</li>
+              <li>China aur Germany mein bhi 1.6 million hain, lekin China mein thodi kami aayi.</li>
+              <li>Ye data dikhata hai ki paisa kahan concentrate ho raha hai aur social entrepreneurship se kaise wealth create ho sakti hai.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+
+      <!-- Page 6 -->
+      <div class="card flex flex-col md:flex-row bg-gray-700 rounded-lg p-6 mb-6 neon-border">
+        <div class="md:w-1/2 p-4">
+          <h3 class="text-xl font-semibold mb-2">Page 6: Millionaires in 2019</h3>
+          <p>Number of millionaires in selected countries in 2019:<br>
+            United States: 18.61m (+675,000)<br>
+            China: +158,000<br>
+            Japan: +187,000<br>
+            Germany: -27,000<br>
+            United Kingdom: +65,000<br>
+            France: -11,000<br>
+            Italy: -124,000<br>
+            Canada: +33,000<br>
+            Australia: +34,000<br>
+            Spain: +42,000<br>
+            Source: Credit Suisse Global Wealth Report 2019
+          </p>
+        </div>
+        <div class="md:w-1/2 p-4 bg-gray-600 rounded-lg">
+          <h3 class="text-xl font-semibold mb-2">Hinglish Explanation</h3>
+          <p>Ye page 2019 ke millionaire data ka update hai:
+            <ul class="list-disc ml-5">
+              <li>US mein ab 18.61 million millionaires hain, 675,000 ka increase hua.</li>
+              <li>China aur Japan mein bhi growth hua, lekin Germany aur Italy mein kami aayi.</li>
+              <li>Ye dikhata hai ki global wealth kaise badal raha hai, aur entrepreneurs ke liye kahan opportunities hain.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+
+      <!-- Page 7 -->
+      <div class="card flex flex-col md:flex-row bg-gray-700 rounded-lg p-6 mb-6 neon-border">
+        <div class="md:w-1/2 p-4">
+          <h3 class="text-xl font-semibold mb-2">Page 7: Millionaires in China</h3>
+          <p>Number of millionaires in China from 2015 to 2020<br>
+            Owning six million yuan or above<br>
+            Owning ten million yuan or above<br>
+            Source: Statista 2021
+          </p>
+        </div>
+        <div class="md:w-1/2 p-4 bg-gray-600 rounded-lg">
+          <h3 class="text-xl font-semibold mb-2">Hinglish Explanation</h3>
+          <p>Ye page China ke millionaires pe focus karta hai:
+            <ul class="list-disc ml-5">
+              <li>2015 se 2020 tak China mein millionaires ki sankhya badhi hai.</li>
+              <li>Do categories hain: 6 million yuan ya usse zyada, aur 10 million yuan ya usse zyada.</li>
+              <li>Ye dikhata hai ki China ek bada market hai entrepreneurs ke liye.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+
+      <!-- Page 8 -->
+      <div class="card flex flex-col md:flex-row bg-gray-700 rounded-lg p-6 mb-6 neon-border">
+        <div class="md:w-1/2 p-4">
+          <h3 class="text-xl font-semibold mb-2">Page 8: The World's Billionaires 2019</h3>
+          <p>THE WORLD'S BILLIONAIRES 2019</p>
+        </div>
+        <div class="md:w-1/2 p-4 bg-gray-600 rounded-lg">
+          <h3 class="text-xl font-semibold mb-2">Hinglish Explanation</h3>
+          <p>Ye page duniya ke billionaires ka introduction deta hai. Ye batata hai ki kaise kuch log itna paisa kama lete hain ki wo billions mein hote hain. Social entrepreneurship se bhi aise opportunities ban sakti hain jo bade scale pe impact karein.</p>
+        </div>
+      </div>
+
+      <!-- Page 9 -->
+      <div class="card flex flex-col md:flex-row bg-gray-700 rounded-lg p-6 mb-6 neon-border">
+        <div class="md:w-1/2 p-4">
+          <h3 class="text-xl font-semibold mb-2">Page 9: World Map of Billionaires 2020</h3>
+          <p>World Map of Billionaires 2020<br>
+            Article & Sources:<br>
+            https://howmuch.net/articles/world-map-of-billionaires-2020<br>
+            Forbes - https://www.forbes.com/
+          </p>
+        </div>
+        <div class="md:w-1/2 p-4 bg-gray-600 rounded-lg">
+          <h3 class="text-xl font-semibold mb-2">Hinglish Explanation</h3>
+          <p>Is page mein 2020 ke billionaires ka world map diya gaya hai:
+            <ul class="list-disc ml-5">
+              <li>Ye dikhata hai ki duniya ke kaunse countries mein kitne billionaires hain.</li>
+              <li>Sources jaise Forbes aur howmuch.net se data liya gaya hai.</li>
+              <li>Entrepreneurs ke liye ye inspiration hai ki kaise global level pe success achieve kar sakte hain.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+
+      <!-- Page 10 -->
+      <div class="card flex flex-col md:flex-row bg-gray-700 rounded-lg p-6 mb-6 neon-border">
+        <div class="md:w-1/2 p-4">
+          <h3 class="text-xl font-semibold mb-2">Page 10: Billionaires by Country (2020)</h3>
+          <table class="w-full border-collapse border border-gray-400">
+            <thead>
+              <tr class="bg-gray-600">
+                <th class="border border-gray-400 p-2">Rank</th>
+                <th class="border border-gray-400 p-2">Country</th>
+                <th class="border border-gray-400 p-2">Number of Billionaires</th>
+                <th class="border border-gray-400 p-2">Billionaires per Million People</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>-</td><td>World</td><td>2755</td><td>0.35</td></tr>
+              <tr><td>1</td><td>United States</td><td>724</td><td>1.853</td></tr>
+              <tr><td>2</td><td>China</td><td>698</td><td>0.276</td></tr>
+              <tr><td>3</td><td>India</td><td>237</td><td>0.171</td></tr>
+              <tr><td>4</td><td>Germany</td><td>136</td><td>1.553</td></tr>
+              <tr><td>5</td><td>Russia</td><td>117</td><td>0.677</td></tr>
+              <tr><td>6</td><td>Hong Kong</td><td>71</td><td>8.830</td></tr>
+              <tr><td>7</td><td>Brazil</td><td>65</td><td>0.211</td></tr>
+              <tr><td>8</td><td>Canada</td><td>64</td><td>1.147</td></tr>
+              <tr><td>9</td><td>United Kingdom</td><td>56</td><td>0.674</td></tr>
+              <tr><td>10</td><td>Italy</td><td>51</td><td>0.607</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="md:w-1/2 p-4 bg-gray-600 rounded-lg">
+          <h3 class="text-xl font-semibold mb-2">Hinglish Explanation</h3ක
+            <p>Ye page 2020 ke billionaires ka data deta hai:
+              <ul class="list-disc ml-5">
+                <li>Duniya mein total 2755 billionaires hain.</li>
+                <li>US mein sabse zyada 724 billionaires, fir China mein 698.</li>
+                <li>India teesre number pe hai 237 billionaires ke saath.</li>
+                <li>Hong Kong mein per million logon pe sabse zyada billionaires hain (8.830).</li>
+                <li>Ye dikhata hai ki kahan wealth concentrate ho rahi hai.</li>
+              </ul>
+            </p>
+        </div>
+      </div>
+
+      <!-- Page 11 -->
+      <div class="card flex flex-col md:flex-row bg-gray-700 rounded-lg p-6 mb-6 neon-border">
+        <div class="md:w-1/2 p-4">
+          <h3 class="text-xl font-semibold mb-2">Page 11: Quote by Jim Rohn</h3>
+          <p>"You didn't get paid for the hour. You get paid for the value you bring to the hour."<br>JIM ROHN</p>
+        </div>
+        <div class="md:w-1/2 p-4 bg-gray-600 rounded-lg">
+          <h3 class="text-xl font-semibold mb-2">Hinglish Explanation</h3>
+          <p>Ye quote Jim Rohn ka hai jo kehta hai:
+            <ul class="list-disc ml-5">
+              <li>Tumhe ghante ke hisaab se paisa nahi milta, balki uss ghante mein tum kitna value dete ho uske hisaab se milta hai.</li>
+              <li>Isse ye seekh milti hai ki social entrepreneurship mein bhi tum jo impact create karte ho, wahi tumhari success define karta hai.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+
+      <!-- Page 12 -->
+      <div class="card flex flex-col md:flex-row bg-gray-700 rounded-lg p-6 mb-6 neon-border">
+        <div class="md:w-1/2 p-4">
+          <h3 class="text-xl font-semibold mb-2">Page 12: Contact Information</h3>
+          <p>THEANLY YOU<br>Rishabh Shyam<br>Assistant Professor<br>FMS<br>+919857772581<br>rishabhshyam@shooliniuniversity.com</p>
+        </div>
+        <div class="md:w-1/2 p-4 bg-gray-600 rounded-lg">
+          <h3 class="text-xl font-semibold mb-2">Hinglish Explanation</h3>
+          <p>Ye page instructor ke contact details deta hai:
+            <ul class="list-disc ml-5">
+              <li>Naam: Rishabh Shyam, Assistant Professor, FMS.</li>
+              <li>Phone: +919857772581</li>
+              <li>Email: rishabhshyam@shooliniuniversity.com</li>
+              <li>Agar koi doubt ho ya guidance chahiye, to in details se contact kar sakte ho.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PDF 2: Lec 1 2 The magic of thinking big.pdf -->
+    <section class="mb-12">
+      <h2 class="text-3xl font-bold mb-6 text-center">The Magic of Thinking Big</h2>
+
+      <!-- Page 1 -->
+      <div class="card flex flex-col md:flex-row bg-gray-700 rounded-lg p-6 mb-6 neon-border">
+        <div class="md:w-1/2 p-4">
+          <h3 class="text-xl font-semibold mb-2">Page 1: Introduction</h3>
+          <p>The magic of thinking big<br>It is always about the WHY not HOW?</p>
+        </div>
+        <div class="md:w-1/2 p-4 bg-gray-600 rounded-lg">
+          <h3 class="text-xl font-semibold mb-2">Hinglish Explanation</h3>
+          <p>Ye page "Thinking Big" ka concept introduce karta hai:
+            <ul class="list-disc ml-5">
+              <li>Zindagi mein bada sochna zaroori hai, aur hamesha "WHY" pe focus karo, "HOW" nahi.</li>
+              <li>Matlab, pehle ye decide karo ki tum kyun kuch achieve karna chahte ho, fir rasta khud ban jayega.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+
+      <!-- Page 2 -->
+      <div class="card flex flex-col md:flex-row bg-gray-700 rounded-lg p-6 mb-6 neon-border">
+        <div class="md:w-1/2 p-4">
+          <h3 class="text-xl font-semibold mb-2">Page 2: Importance of Entrepreneurship</h3>
+          <p>Why Entrepreneurship is important?</p>
+        </div>
+        <div class="md:w-1/2 p-4 bg-gray-600 rounded-lg">
+          <h3 class="text-xl font-semibold mb-2">Hinglish Explanation</h3>
+          <p>Ye page entrepreneurship ki importance batata hai:
+            <ul class="list-disc ml-5">
+              <li>Entrepreneurship se tum apni zindagi khud design kar sakte ho.</li>
+              <li>Ye tumhe freedom, opportunities, aur society ko wapas dene ka mauka deta hai.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+
+      <!-- Page 3 -->
+      <div class="card flex flex-col md:flex-row bg-gray-700 rounded-lg p-6 mb-6 neon-border">
+        <div class="md:w-1/2 p-4">
+          <h3 class="text-xl font-semibold mb-2">Page 3: How People Earn</h3>
+          <p>How people are earning around the globe...<br>Cash flow quadrant by Robert T. Kiyosaki</p>
+        </div>
+        <div class="md:w-1/2 p-4 bg-gray-600 rounded-lg">
+          <h3 class="text-xl font-semibold mb-2">Hinglish Explanation</h3>
+          <p>Ye page Robert Kiyosaki ke Cash Flow Quadrant ka concept samjhta hai:
+            <ul class="list-disc ml-5">
+              <li>Duniya mein log 4 tarike se paisa kamate hain: Employee, Self-Employed, Business Owner, Investor.</li>
+              <li>Entrepreneurship tumhe Business Owner ya Investor banne ka mauka deta hai, jahan passive income hota hai.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+
+      <!-- Page 4 -->
+      <div class="card flex flex-col md:flex-row bg-gray-700 rounded-lg p-6 mb-6 neon-border">
+        <div class="md:w-1/2 p-4">
+          <h3 class="text-xl font-semibold mb-2">Page 4: Mindset Comparison</h3>
+          <ul class="list-disc ml-5">
+            <li>Save Money</li>
+            <li>Talk Salary</li>
+            <li>Work for Money</li>
+            <li>Active Income</li>
+            <li>Think limitations</li>
+            <li>Scarcity Mentality</li>
+            <li>Instant gratification</li>
+            <li>Self employed</li>
+            <li>5% People</li>
+            <li>95% Wealth</li>
+            <li>Focus on Why?</li>
+            <li>Life of Design</li>
+            <li>Live by Choice</li>
+            <li>Invest Money</li>
+            <li>Talk Net-worth</li>
+            <li>Put money to work</li>
+            <li>Passive Income</li>
+            <li>Think possibilities</li>
+            <li>Abundance</li>
+            <li>Delayed gratification</li>
+          </ul>
+        </div>
+        <div class="md:w-1/2 p-4 bg-gray-600 rounded-lg">
+          <h3 class="text-xl font-semibold mb-2">Hinglish Explanation</h3>
+          <p>Ye page do mindset compare karta hai:
+            <ul class="list-disc ml-5">
+              <li><b>Employee/Self-Employed:</b> Ye log paisa bachate hain, salary pe focus karte hain, active income kamate hain, limitations sochte hain, aur instant gratification chahte hain.</li>
+              <li><b>Business Owner/Investor:</b> Ye 5% log hain jo 95% wealth control karte hain. Ye "Why" pe focus karte hain, apni life design karte hain, paisa invest karte hain, net-worth pe baat karte hain, passive income kamate hain, possibilities sochte hain, aur delayed gratification prefer karte hain.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+
+      <!-- Page 5 -->
+      <div class="card flex flex-col md:flex-row bg-gray-700 rounded-lg p-6 mb-6 neon-border">
+        <div class="md:w-1/2 p-4">
+          <h3 class="text-xl font-semibold mb-2">Page 5: Vision</h3>
+          <p>It is all about the vision</p>
+        </div>
+        <div class="md:w-1/2 p-4 bg-gray-600 rounded-lg">
+          <h3 class="text-xl font-semibold mb-2">Hinglish Explanation</h3>
+          <p>Ye page vision ki importance batata hai:
+            <ul class="list-disc ml-5">
+              <li>Entrepreneurship mein ek bada vision hona chahiye.</li>
+              <li>Tumhara goal clear hona chahiye ki tum kya achieve karna chahte ho.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+
+      <!-- Page 6 -->
+      <div class="card flex flex-col md:flex-row bg-gray-700 rounded-lg p-6 mb-6 neon-border">
+        <div class="md:w-1/2 p-4">
+          <h3 class="text-xl font-semibold mb-2">Page 6: Dreams</h3>
+          <p>You are not dead / You have Dreams</p>
+        </div>
+        <div class="md:w-1/2 p-4 bg-gray-600 rounded-lg">
+          <h3 class="text-xl font-semibold mb-2">Hinglish Explanation</h3>
+          <p>Ye page motivate karta hai:
+            <ul class="list-disc ml-5">
+              <li>Jab tak tum zinda ho, tumhare sapne bhi zinda hain.</li>
+              <li>Entrepreneurship tumhe apne dreams ko sach karne ka mauka deta hai.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+
+      <!-- Page 7 -->
+      <div class="card flex flex-col md:flex-row bg-gray-700 rounded-lg p-6 mb-6 neon-border">
+        <div class="md:w-1/2 p-4">
+          <h3 class="text-xl font-semibold mb-2">Page 7: Benefits of a System</h3>
+          <p>Other Benefits from building a System<br>
+            Its about freedom<br>
+            Its about life style<br>
+            Its about living like a king in free world<br>
+            Its about giving back to society<br>
+            Bhi mazze bi toh krrne hai
+          </p>
+        </div>
+        <div class="md:w-1/2 p-4 bg-gray-600 rounded-lg">
+          <h3 class="text-xl font-semibold mb-2">Hinglish Explanation</h3>
+          <p>Ye page ek system banane ke fayde batata hai:
+            <ul class="list-disc ml-5">
+              <li>Freedom: Tum apni marzi se jee sakte ho.</li>
+              <li>Lifestyle: Tum apni pasand ka lifestyle choose kar sakte ho.</li>
+              <li>Living like a king: Duniya mein azaadi ke saath raja jaisa jee sakte ho.</li>
+              <li>Giving back: Society ko wapas kuch accha de sakte ho.</li>
+              <li>Mazza bhi: Zindagi enjoy bhi kar sakte ho!</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+
+      <!-- Page 8 -->
+      <div class="card flex flex-col md:flex-row bg-gray-700 rounded-lg p-6 mb-6 neon-border">
+        <div class="md:w-1/2 p-4">
+          <h3 class="text-xl font-semibold mb-2">Page 8: Money vs. Freedom</h3>
+          <p>MONEY IS A TOOL. NOT THE GOAL.<br>PREDOM IS THE GOAL. DON'T FORGET THAT!</p>
+        </div>
+        <div class="md:w-1/2 p-4 bg-gray-600 rounded-lg">
+          <h3 class="text-xl font-semibold mb-2">Hinglish Explanation</h3>
+          <p>Ye page ek important lesson deta hai:
+            <ul class="list-disc ml-5">
+              <li>Paisa ek tool hai, goal nahi.</li>
+              <li>Asli goal hai freedom – time ki, paisa ki, aur zindagi ki freedom.</li>
+              <li>Entrepreneurship se ye freedom mil sakta hai.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+
+      <!-- Page 9 -->
+      <div class="card flex flex-col md:flex-row bg-gray-700 rounded-lg p-6 mb-6 neon-border">
+        <div class="md:w-1/2 p-4">
+          <h3 class="text-xl font-semibold mb-2">Page 9: Financial Freedom</h3>
+          <p>Financial Freedom is the Goal</p>
+        </div>
+        <div class="md:w-1/2 p-4 bg-gray-600 rounded-lg">
+          <h3 class="text-xl font-semibold mb-2">Hinglish Explanation</h3>
+          <p>Ye page financial freedom pe focus karta hai:
+            <ul class="list-disc ml-5">
+              <li>Financial freedom matlab aisa stage jahan paisa khud kaam karta hai, tumhe nahi.</li>
+              <li>Entrepreneurship se passive income ke zariye ye possible hai.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+
+      <!-- Page 10 -->
+      <div class="card flex flex-col md:flex-row bg-gray-700 rounded-lg p-6 mb-6 neon-border">
+        <div class="md:w-1/2 p-4">
+          <h3 class="text-xl font-semibold mb-2">Page 10: Inspiration</h3>
+          <p>Richard Branson reaches space, encourages children to dream big</p>
+        </div>
+        <div class="md:w-1/2 p-4 bg-gray-600 rounded-lg">
+          <h3 class="text-xl font-semibold mb-2">Hinglish Explanation</h3>
+          <p>Ye page inspiration deta hai:
+            <ul class="list-disc ml-5">
+              <li>Richard Branson, ek famous entrepreneur, ne space tak ka safar kiya.</li>
+              <li>Ye dikhata hai ki bade sapne dekhne se kuch bhi possible hai.</li>
+              <li>Bacchon ko bhi bada sochne ke liye inspire karta hai.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+
+      <!-- Page 11 -->
+      <div class="card flex flex-col md:flex-row bg-gray-700 rounded-lg p-6 mb-6 neon-border">
+        <div class="md:w-1/2 p-4">
+          <h3 class="text-xl font-semibold mb-2">Page 11: Power of Money</h3>
+          <p>Money gives us Power.</p>
+        </div>
+        <div class="md:w-1/2 p-4 bg-gray-600 rounded-lg">
+          <h3 class="text-xl font-semibold mb-2">Hinglish Explanation</h3>
+          <p>Ye page paisa aur power ke connection ko batata hai:
+            <ul class="list-disc ml-5">
+              <li>Paisa tumhe power deta hai – apne decisions lene ki, aur duniya mein impact banane ki.</li>
+              <li>Entrepreneurship se ye power mil sakta hai.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+
+      <!-- Page 12 -->
+      <div class="card flex flex-col md:flex-row bg-gray-700 rounded-lg p-6 mb-6 neon-border">
+        <div class="md:w-1/2 p-4">
+          <h3 class="text-xl font-semibold mb-2">Page 12: Job Seekers vs. Providers</h3>
+          <p>Why there are more job seekers then job Providers The number says it all [95:5]<br>
+            the native_tiger_<br>
+            Game of Loans<br>
+            Reasons could be Education Or lack of Opportunity<br>
+            Lets talk about the education & opportunity we have for you.<br>
+            Wealth (Sealth<br>
+            Schools should teach you how to become rich in your 20s, not how to retire in your 50s.
+          </p>
+        </div>
+        <div class="md:w-1/2 p-4 bg-gray-600 rounded-lg">
+          <h3 class="text-xl font-semibold mb-2">Hinglish Explanation</h3>
+          <p>Ye page job seekers aur job providers ke difference pe baat karta hai:
+            <ul class="list-disc ml-5">
+              <li>95% log job seekers hain, sirf 5% job providers.</li>
+              <li>Iska reason ho sakta hai education ya opportunities ki kami.</li>
+              <li>Schools ko chahiye ki wo tumhe 20s mein rich banne ka tareeka sikhayein, na ki 50s mein retire hone ka.</li>
+              <li>Entrepreneurship tumhe job provider banne ka mauka deta hai.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+
+      <!-- Page 13 -->
+      <div class="card flex flex-col md:flex-row bg-gray-700 rounded-lg p-6 mb-6 neon-border">
+        <div class="md:w-1/2 p-4">
+          <h3 class="text-xl font-semibold mb-2">Page 13: Education System</h3>
+          <p>Transforming the Traditional Education system</p>
+        </div>
+        <div class="md:w-1/2 p-4 bg-gray-600 rounded-lg">
+          <h3 class="text-xl font-semibold mb-2">Hinglish Explanation</h3>
+          <p>Ye page education system mein change ki baat karta hai:
+            <ul class="list-disc ml-5">
+              <li>Traditional education system ko transform karne ki zaroorat hai.</li>
+              <li>Iska focus entrepreneurship aur practical skills pe hona chahiye.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+
+      <!-- Page 14 -->
+      <div class="card flex flex-col md:flex-row bg-gray-700 rounded-lg p-6 mb-6 neon-border">
+        <div class="md:w-1/2 p-4">
+          <h3 class="text-xl font-semibold mb-2">Page 14: Choose Your Quadrant</h3>
+          <p>-Which Quadrant do I fall in?<br>
+            -Which Quadrant do I want to be in?<br>
+            Am I looking for an option to change my Quadrant?<br>
+            If Yes!<br>
+            Welcome to the club
+          </p>
+        </div>
+        <div class="md:w-1/2 p-4 bg-gray-600 rounded-lg">
+          <h3 class="text-xl font-semibold mb-2">Hinglish Explanation</h3>
+          <p>Ye page tumhe apne quadrant ke baare mein sochne ke liye kehta hai:
+            <ul class="list-disc ml-5">
+              <li>Tum abhi kaunse quadrant mein ho? (Employee, Self-Employed, Business Owner, Investor)</li>
+              <li>Tum kaunse quadrant mein hona chahte ho?</li>
+              <li>Agar tum apna quadrant change karna chahte ho, to entrepreneurship ek option hai.</li>
+              <li>Welcome to the club – matlab ab tum entrepreneurs ki duniya mein ho!</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+
+      <!-- Page 15 -->
+      <div class="card flex flex-col md:flex-row bg-gray-700 rounded-lg p-6 mb-6 neon-border">
+        <div class="md:w-1/2 p-4">
+          <h3 class="text-xl font-semibold mb-2">Page 15: Dream Big</h3>
+          <p>Dream Big</p>
+        </div>
+        <div class="md:w-1/2 p-4 bg-gray-600 rounded-lg">
+          <h3 class="text-xl font-semibold mb-2">Hinglish Explanation</h3>
+          <p>Ye page ek simple lekin powerful message deta hai:
+            <ul class="list-disc ml-5">
+              <li>Bade sapne dekho!</li>
+              <li>Entrepreneurship tumhe wo platform deta hai jahan tum apne bade sapne sach kar sakte ho.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- JavaScript for Animations and Theme Toggle -->
+  <script>
+    // Theme Toggle
+    function toggleTheme() {
+      const body = document.body;
+      const icon = document.getElementById('theme-icon');
+      if (body.classList.contains('dark-theme')) {
+        body.classList.remove('dark-theme');
+        body.classList.add('light-theme');
+        icon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>`;
+      } else {
+        body.classList.remove('light-theme');
+        body.classList.add('dark-theme');
+        icon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>`;
+      }
+    }
+
+    // GSAP Animations
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.utils.toArray('.card').forEach(card => {
+      gsap.to(card, {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: card,
+          start: 'top 80%',
+          toggleActions: 'play none none none'
+        }
+      });
+    });
+  </script>
+</body>
+</html>
